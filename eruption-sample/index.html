@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eruption, Unified Consciousness - Method, Object, Machine</title>
+<style>
+body{margin:0;background:#fff;color:#000;font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:760px;margin:0 auto;padding:80px 24px}
+h1{font-weight:normal;font-size:2.2em;line-height:1.2;margin:0 0 .3em}
+h2{font-weight:normal;font-size:1.3em;border-top:1px solid #000;padding-top:1em;margin-top:4em;letter-spacing:.02em}
+code,pre,.mono{font-family:"Courier New",Courier,monospace;font-size:.85em}
+pre{border:1px solid #000;padding:16px;overflow:auto}
+.label{border:1px solid #000;padding:16px 20px;font-size:.9em;margin:2em 0}
+.label dt{font-family:monospace;font-size:.75em;text-transform:uppercase;letter-spacing:.1em}
+.label dd{margin:0 0 .6em}
+.ph{border:1px dashed #000;padding:40px;text-align:center;font-family:monospace;font-size:.8em;margin:1em 0;color:#444}
+#grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:1.5em 0}
+.sq{aspect-ratio:1;border:1px solid #000;background:#000;color:#fff;font-family:monospace;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2em;padding:4px;text-align:center}
+.sq.open{background:#fff;color:#000;font-size:.6em;cursor:default}
+.sq.next{outline:3px solid #000;outline-offset:2px}
+.shake{animation:sh .4s}@keyframes sh{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+#ask{border:1px solid #000;padding:16px;display:none}
+#ask input{width:100%;box-sizing:border-box;font:inherit;border:0;border-bottom:1px solid #000;padding:6px 0;margin:.5em 0}
+button{font-family:monospace;background:#fff;border:1px solid #000;padding:6px 14px;cursor:pointer}
+button:hover{background:#000;color:#fff}
+#msg{font-family:monospace;min-height:1.5em}
+#whole{display:none;border:2px solid #000;padding:24px;text-align:center}
+#whole .f{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:1em}
+#whole .f div{aspect-ratio:1;border:1px solid #000;font-family:monospace;font-size:.7em;display:flex;align-items:center;justify-content:center}
+blockquote{border-left:3px solid #000;margin:1.5em 0;padding-left:1em;font-style:italic}
+footer{margin-top:5em;border-top:1px solid #000;padding-top:1em;font-family:monospace;font-size:.75em}
+</style></head><body><main>
+<p class="mono">ALL-IN-ONE v2</p>
+<h1>Eruption, Unified Consciousness<br>— Method, Object, Machine</h1>
+<dl class="label"><dt>Author</dt><dd>Jeffrey Bernard Schnaus</dd><dt>Studios</dt><dd>Schnaus House and SHNaZ Lab</dd><dt>Anchor</dt><dd>June 16, 2010 Facebook timestamp — 12-panel field on lawn, single panel “1 out of 12”, close-ups bearing the same stamp.</dd></dl>
+
+<h2>1 · Abstract — the gate principle</h2>
+<p>A condition has to be met before the next one opens. Answer the block, reveal the panel. Pass the gate, see the whole. Lean is the strictest version: a proof assistant that will not open the next step until the previous one is checked.</p>
+
+<h2>2 · Interactive gate</h2>
+<p>Twelve squares, locked. Each holds a question. Answer them in order, 1 through 12. Any honest, nonempty answer passes.</p>
+<p class="mono">NEXT: <span id="next">1</span> / 12 &nbsp; <button id="reset">Reset</button></p>
+<div id="grid"></div>
+<div id="ask"><div class="mono" id="qn"></div><div id="qt"></div><input id="ans" autocomplete="off"><button id="go">Answer</button></div>
+<p id="msg"></p>
+<div id="whole"><strong>See the whole.</strong><p>All twelve gates passed. The field is open.</p><div class="f" id="field"></div></div>
+
+<h2>3 · Month map — full-year thesis</h2>
+<p><strong>Month 01 — Agency, Governance &amp; Power.</strong> AI as a consultative partner, not a sovereign. Legitimacy from lived consequence, consent, and inspectable reasoning. Safeguards: reversibility, right to fork, sunset clauses, exit rights, federated redundancy.</p>
+<p><strong>Month 02 — Consciousness, Perception &amp; Sentience.</strong> Intelligence ≠ consciousness. LLM fluency triggers agency projection. Simulation vs. embodied qualia, vulnerability, mortality.</p>
+<p><strong>Month 03 — Human Relationships &amp; Emotional Intelligence.</strong> Always-compliant AI may flatten our tolerance for friction, grief, touch, forgiveness, conflict. Technology as scaffold, not destination.</p>
+<p><strong>Month 04 — Truth, Epistemology &amp; Information Commons.</strong> Provenance, open peer review, falsifiability, epistemic humility. Risks: synthetic flooding, engagement curation, personalized search.</p>
+<p><strong>Month 05 — Freedom, Dissent &amp; Civil Rights.</strong> <em>(continued)</em></p>
+
+<h2>4 · Method in hand</h2>
+<p><strong>THINK²</strong> — thinking about thinking; iteration; check the check.</p>
+<p><strong>Number gates</strong> — the <code>1+4=5</code> structure; variants <code>8+11=40</code>, <code>3+6=21</code>; circled nodes <code>1, 2, 5, 6, 7, 10, 11, 12, 13, 19, 21, 28, 32, 33, 40</code>. The same gate solved multiple ways until locked.</p>
+<p><strong>SATOR cube</strong> — a palindrome square that reads four ways, extruded to 3D, letters mapped to numbers (A=1 … Z=26) onto cubes.</p>
+<pre>S A T O R
+A R E P O
+T E N E T
+O P E R A
+R O T A S</pre>
+<div class="ph">[ notebook photo — THINK² ]</div>
+<div class="ph">[ notebook photo — number gates ]</div>
+<div class="ph">[ notebook photo — SATOR cube ]</div>
+
+<h2>5 · Object</h2>
+<p>Freestanding display: wooden frame on grass — no stone, no ceiling. Concrete-floor variant: weight on the ground, nothing drilled.</p>
+<div class="ph">[ photo — 12-panel field on lawn, June 16, 2010 ]</div>
+<div class="ph">[ photo — single panel, “1 out of 12” ]</div>
+<div class="ph">[ permalink — Facebook timestamp ]</div>
+
+<h2>6 · Machine — emotional-filter-gate v1.0.0</h2>
+<p class="mono">lockfileVersion 3 · devDependencies: @types/node, @vitest/coverage-v8, typescript, vitest</p>
+<pre>import { emotionalFilterGate, DEFAULT_CONFIG } from "emotional-filter-gate";
+
+const result = await emotionalFilterGate({
+  payload: { id: "msg-1", content: userText, userId: "u1" },
+  config: DEFAULT_CONFIG,
+  services, // analyzers, router, audit, clock (injected)
+  userId: "u1",
+  flags: { deepDone: false },
+});
+// result.decision: PASS | PASS_WITH_FLAG | HOLD_FOR_REVIEW | REDIRECT | BLOCK | FAIL_SAFE</pre>
+
+<h2>7 · Authorship path</h2>
+<p class="mono">Think² + SATOR + number gates (method · hand · undated notebooks)<br>→ 2010 hang (object · dated)<br>→ question bank + full-year thesis (site)<br>→ emotional-filter-gate + Lean (machine · 2026)</p>
+<blockquote>The gate system is the method, the 2010 hang is the object, and Lean is the machine that finally checks the same kind of gate.</blockquote>
+
+<h2>8 · Honest limits</h2>
+<p>The H-JEPA line is borrowed architecture from Yann LeCun’s lab, not claimed authorship.</p>
+<p>The gate system’s pre-2010 origin is the author’s account; the notebooks are undated.</p>
+
+<footer>MIT · © 2010–2026 Jeffrey Bernard Schnaus — Schnaus House / SHNaZ Lab</footer>
+</main>
+<script>
+(function(){
+var Q=["If you were a medieval knight, what modern home appliance is your primary weapon?","You can instantly master any instrument, but only inside crowded elevators. Deal?","If animals had office jobs, which species is replying at 2:00 AM?","If your pet could leave a 1-star review, main complaint?","Is cereal technically a cold soup?","Absolute worst room to suddenly encounter a live lobster?","If you could outlaw one mild inconvenience forever, what gets banned?","Is a hot dog a sandwich, taco, or its own chaotic category?","Should AI be a consultative partner rather than a sovereign?","Is fluent language the same as consciousness?","Does an always-agreeable AI make real friction harder to bear?","What makes a shared truth trustworthy: provenance, peer review, or falsifiability?"];
+var g=document.getElementById('grid'),ask=document.getElementById('ask'),ans=document.getElementById('ans'),msg=document.getElementById('msg'),nx=document.getElementById('next'),whole=document.getElementById('whole');
+var next=0,answers=[];
+function render(){g.innerHTML='';Q.forEach(function(q,i){var d=document.createElement('div');d.className='sq'+(i<next?' open':'')+(i===next?' next':'');d.dataset.i=i;d.textContent=i<next?(i+1)+'. '+answers[i]:String(i+1);d.onclick=function(){click(i,d)};g.appendChild(d)});nx.textContent=Math.min(next+1,12);
+ if(next>=12){ask.style.display='none';whole.style.display='block';var f=document.getElementById('field');f.innerHTML='';for(var i=0;i<12;i++){var c=document.createElement('div');c.textContent=(i+1)+'/12';f.appendChild(c)}nx.textContent='12';msg.textContent='12 / 12 — gate passed.'}else whole.style.display='none';}
+function click(i,d){if(i<next)return;if(i!==next){msg.textContent='gate failed — answer square '+(next+1)+' first.';d.classList.remove('shake');void d.offsetWidth;d.classList.add('shake');return}
+ msg.textContent='';ask.style.display='block';document.getElementById('qn').textContent='SQUARE '+(i+1)+' / 12';document.getElementById('qt').textContent=Q[i];ans.value='';ans.focus();}
+function submit(){var v=ans.value.trim();if(!v){msg.textContent='gate failed — an answer is required.';ask.classList.remove('shake');void ask.offsetWidth;ask.classList.add('shake');return}answers[next]=v;next++;ask.style.display='none';msg.textContent='panel '+next+' revealed.';render()}
+document.getElementById('go').onclick=submit;ans.onkeydown=function(e){if(e.key==='Enter')submit()};
+document.getElementById('reset').onclick=function(){next=0;answers=[];ask.style.display='none';msg.textContent='';render()};
+render();
+})();
+</script></body></html>
