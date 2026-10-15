@@ -120,3 +120,9 @@ npm run lint:package
 ## License
 
 MIT
+
+<!-- stamp -->
+---
+**Author: Jeff SHNaZLab (Jeffrey Schnaus) · Named credit · Created 2026-10-11 04:41 MDT · First public 2026-10-14 00:26:20 MDT · 🟢 green originality mark**  
+_Concept and direction: Jeffrey Schnaus; AI-assisted build._
+<!-- /stamp -->
