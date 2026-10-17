@@ -30,16 +30,16 @@ footer{margin-top:5em;border-top:1px solid #000;padding-top:1em;font-family:mono
 </style><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/shnaz.css"><style id="sz-theme">body.sz{font:17px/1.65 var(--sz-font)!important}
 body.sz h1{font:900 2.2em/1.1 var(--sz-font);background:var(--sz-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 body.sz h2{border-top-color:var(--sz-line);color:#f0abfc;font-weight:800}
-body.sz pre,body.sz .label,body.sz #ask,body.sz #whole,body.sz .ph{border-color:var(--sz-line)!important;border-radius:var(--sz-r);background:rgba(20,20,46,.85);color:var(--sz-tx)}
+body.sz pre,body.sz .label,body.sz #ask,body.sz #whole,body.sz .ph{border-color:var(--sz-line)!important;border-radius:var(--sz-r);background:var(--sz-card);color:var(--sz-tx)}
 body.sz .ph{color:var(--sz-mu)}body.sz footer{border-top-color:var(--sz-line)}
-body.sz .sq{background:linear-gradient(160deg,#1b1b3d,#2a1650);border:1px solid rgba(217,70,239,.45);border-radius:14px;color:#fff;font-family:var(--sz-font);font-weight:800}
+body.sz .sq{background:linear-gradient(160deg,var(--sz-card2),var(--sz-card));border:1px solid rgba(217,70,239,.45);border-radius:14px;color:var(--sz-tx);font-family:var(--sz-font);font-weight:800}
 body.sz .sq.open{background:linear-gradient(160deg,rgba(57,255,136,.18),rgba(57,255,136,.06));border-color:var(--sz-gr);color:var(--sz-tx)}
-body.sz .sq.next{outline:3px solid var(--sz-pk);box-shadow:var(--sz-glow)}
+body.sz .sq.next{outline:3px solid var(--sz-pu);box-shadow:var(--sz-glow)}body.sz .sq.open{color:var(--sz-tx)}body.sz #msg.sz-fail{color:var(--sz-warn)}
 body.sz button{background:linear-gradient(90deg,#e11d74,#ec4899);color:#fff;border:0;border-radius:12px;padding:8px 16px;font:800 14px var(--sz-font)}
 body.sz button:hover{filter:brightness(1.1)}
-body.sz #ask input{background:transparent;color:var(--sz-tx);border-bottom-color:var(--sz-pk)}
+body.sz #ask input{background:transparent;color:var(--sz-tx);border-bottom-color:var(--sz-pu)}
 body.sz #whole .f div{border-color:var(--sz-gr);border-radius:8px;color:var(--sz-gr)}
-body.sz blockquote{border-left-color:var(--sz-pk)}</style></head><body class="sz"><script src="/shnaz-nav.js"></script><main>
+body.sz blockquote{border-left-color:var(--sz-pu)}</style></head><body class="sz"><script src="/shnaz-nav.js"></script><main>
 <p class="mono">ALL-IN-ONE v2</p>
 <h1>Eruption, Unified Consciousness<br>— Method, Object, Machine</h1>
 <dl class="label"><dt>Author</dt><dd>Jeffrey Bernard Schnaus</dd><dt>Studios</dt><dd>Schnaus House and SHNaZ Lab</dd><dt>Anchor</dt><dd>June 16, 2010 Facebook timestamp — 12-panel field on lawn, single panel “1 out of 12”, close-ups bearing the same stamp.</dd></dl>
@@ -111,10 +111,10 @@ var g=document.getElementById('grid'),ask=document.getElementById('ask'),ans=doc
 var next=0,answers=[],SK='efg-gate-v1';try{var sv=JSON.parse(localStorage.getItem(SK)||'null');if(sv&&Array.isArray(sv.answers)){answers=sv.answers.slice(0,12);next=Math.min(12,Math.max(0,sv.next|0,0));}}catch(e){}
 function save(){try{localStorage.setItem(SK,JSON.stringify({next:next,answers:answers,savedAt:new Date().toISOString()}))}catch(e){}}
 function render(){g.innerHTML='';Q.forEach(function(q,i){var d=document.createElement('div');d.className='sq'+(i<next?' open':'')+(i===next?' next':'');d.dataset.i=i;d.textContent=i<next?(i+1)+'. '+answers[i]:String(i+1);d.onclick=function(){click(i,d)};g.appendChild(d)});nx.textContent=Math.min(next+1,12);
- if(next>=12){ask.style.display='none';whole.style.display='block';var f=document.getElementById('field');f.innerHTML='';for(var i=0;i<12;i++){var c=document.createElement('div');c.textContent=(i+1)+'/12';f.appendChild(c)}nx.textContent='12';msg.textContent='12 / 12 — gate passed.'}else whole.style.display='none';}
-function click(i,d){if(i<next)return;if(i!==next){msg.textContent='gate failed — answer square '+(next+1)+' first.';d.classList.remove('shake');void d.offsetWidth;d.classList.add('shake');return}
- msg.textContent='';ask.style.display='block';document.getElementById('qn').textContent='SQUARE '+(i+1)+' / 12';document.getElementById('qt').textContent=Q[i];ans.value='';ans.focus();}
-function submit(){var v=ans.value.trim();if(!v){msg.textContent='gate failed — an answer is required.';ask.classList.remove('shake');void ask.offsetWidth;ask.classList.add('shake');return}answers[next]=v;next++;save();ask.style.display='none';msg.textContent='panel '+next+' revealed.';render()}
+ if(next>=12){ask.style.display='none';whole.style.display='block';var f=document.getElementById('field');f.innerHTML='';for(var i=0;i<12;i++){var c=document.createElement('div');c.textContent=(i+1)+'/12';f.appendChild(c)}nx.textContent='12';msg.className='';msg.textContent='12 / 12 — gate passed.'}else whole.style.display='none';}
+function click(i,d){if(i<next)return;if(i!==next){msg.className='sz-fail';msg.textContent='gate failed — answer square '+(next+1)+' first.';d.classList.remove('shake');void d.offsetWidth;d.classList.add('shake');return}
+ msg.className='';msg.textContent='';ask.style.display='block';document.getElementById('qn').textContent='SQUARE '+(i+1)+' / 12';document.getElementById('qt').textContent=Q[i];ans.value='';ans.focus();}
+function submit(){var v=ans.value.trim();if(!v){msg.className='sz-fail';msg.textContent='gate failed — an answer is required.';ask.classList.remove('shake');void ask.offsetWidth;ask.classList.add('shake');return}answers[next]=v;next++;save();ask.style.display='none';msg.className='';msg.textContent='panel '+next+' revealed.';render()}
 document.getElementById('go').onclick=submit;ans.onkeydown=function(e){if(e.key==='Enter')submit()};
 document.getElementById('reset').onclick=function(){next=0;answers=[];try{localStorage.removeItem(SK)}catch(e){}ask.style.display='none';msg.textContent='';render()};
 render();
